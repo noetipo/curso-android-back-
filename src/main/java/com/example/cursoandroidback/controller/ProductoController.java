@@ -35,7 +35,8 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
-    public void eliminarProducto(@PathVariable Long id) {
+    public Boolean eliminarProducto(@PathVariable Long id) {
         productoService.eliminarProducto(id);
+        return true;
     }
 }
